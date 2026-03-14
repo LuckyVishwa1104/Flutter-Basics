@@ -27,7 +27,14 @@ class HomePageNew extends StatelessWidget {
 
         // Body -
         body: const Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          // column take all available height and take max width of tis children
+          
+
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          // crossAxisAlignment: CrossAxisAlignment.stretch,
+
+          // check for - spaceAround
+          
           children: [
             
             Text(
@@ -42,10 +49,10 @@ class HomePageNew extends StatelessWidget {
                 decoration: TextDecoration.overline, // to add line to the text (under, over, inline)
               ),
             ),
-            SizedBox(
-              height: 20,
-            ),
-
+            // SizedBox(
+            //   height: 20,
+            // ),
+        
             Text(
               'Good Morning Flutter',
               style: TextStyle(
@@ -55,10 +62,10 @@ class HomePageNew extends StatelessWidget {
                 decoration: TextDecoration.lineThrough,
               ),
             ),
-            SizedBox(
-              height: 20,
-            ),
-
+            // SizedBox(
+            //   height: 20,
+            // ),
+        
             Text(
               'Good Night Flutter',
               style: TextStyle(
@@ -71,7 +78,7 @@ class HomePageNew extends StatelessWidget {
                 decoration: TextDecoration.underline,
               ),
             ),
-            
+        
           ],
         ),
       ),
