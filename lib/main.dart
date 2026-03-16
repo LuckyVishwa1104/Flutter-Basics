@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/bottom_navigton_demo/bottom_nav_driver.dart';
 import 'package:flutter_basics/home_page_new.dart';
 import 'package:flutter_basics/hone_page.dart';
 
 void main() {
-  runApp( const MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -12,6 +13,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const HomePageNew();
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: BottomNavDriver(),
+    );
   }
 }
