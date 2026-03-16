@@ -11,7 +11,7 @@ class SettingDemo extends StatelessWidget {
         child: Text(
           'Setting',
           style: TextStyle(
-            color: Colors.yellow,
+            color: Colors.blue,
             fontSize: 45,
             fontWeight: FontWeight.w600,
             fontStyle: FontStyle.normal,

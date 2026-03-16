@@ -9,7 +9,7 @@ class ProfileDemo extends StatelessWidget {
       color: const Color.fromARGB(255, 212, 196, 196),
       child: const Center(
         child: Text(
-          'Sett',
+          'Profile',
           style: TextStyle(
             color: Colors.green,
             fontSize: 45,
