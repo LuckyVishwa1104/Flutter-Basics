@@ -5,20 +5,109 @@ class HomeDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: const Color.fromARGB(255, 217, 216, 216),
-      child: const Center(
-        child: Text(
-          'Home',
-          style: TextStyle(
-            color: Colors.red,
-            fontSize: 30,
-            fontWeight: FontWeight.w500,
-            fontStyle: FontStyle.normal,
-            letterSpacing: 1.5,
-            decoration: TextDecoration.underline,
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        children: [
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Container(
+                  height: 35,
+                  width: 30,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(3),
+                    color: Colors.red,
+                  ),
+                ),
+                Container(
+                  height: 35,
+                  width: 30,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(3),
+                    color: Colors.green,
+                  ),
+                ),
+                Container(
+                  height: 35,
+                  width: 30,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(3),
+                    color: Colors.blue,
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            height: 50,
+            width: 100,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(3),
+              color: Colors.purpleAccent,
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Container(
+                  height: 40,
+                  width: 30,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(3),
+                    color: Colors.green,
+                  ),
+                ),
+                Container(
+                  height: 40,
+                  width: 30,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(3),
+                    color: Colors.blue,
+                  ),
+                ),
+                Container(
+                  height: 40,
+                  width: 30,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(3),
+                    color: Colors.red,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            height: 50,
+            width: 100,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(3),
+              color: Colors.purpleAccent,
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            height: 50,
+            width: 100,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(3),
+              color: Colors.purpleAccent,
+            ),
+          ),
+        ],
       ),
     );
   }
