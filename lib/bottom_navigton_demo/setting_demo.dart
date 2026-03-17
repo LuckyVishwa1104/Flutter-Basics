@@ -5,76 +5,83 @@ class SettingDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      child: Column(
-        children: [
-          Container(
-            height: 70,
-            width: 50,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(3),
-              color: Colors.purple,
+    return Container(
+      color: const Color.fromARGB(255, 238, 199, 154),
+      padding: const EdgeInsets.all(8),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            Container(
+              height: 170,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(3),
+                color: Colors.purple,
+              ),
             ),
-          ),
-          SizedBox(height: 15,
-          ),
-          Container(
-            height: 25,
-            width: 50,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(3),
-              color: Colors.indigo,
+            SizedBox(
+              height: 15,
             ),
-          ),
-           SizedBox(height: 15,
-          ),
-          Container(
-            height: 45,
-            width: 50,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(3),
-              color: Colors.green,
+            Container(
+              height: 125,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(3),
+                color: Colors.indigo,
+              ),
             ),
-          ),
-           SizedBox(height: 15,
-          ),
-          Container(
-            height: 30,
-            width: 50,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(3),
-              color: Colors.orange,
+            SizedBox(
+              height: 15,
             ),
-          ),
-           SizedBox(height: 15,
-          ),
-          Container(
-            height: 50,
-            width: 50,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(3),
-              color: Colors.red,
+            Container(
+              height: 145,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(3),
+                color: Colors.green,
+              ),
             ),
-          ),
-        ],
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              height: 130,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(3),
+                color: Colors.orange,
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              height: 150,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(3),
+                color: Colors.red,
+              ),
+            ),
+          ],
+        ),
       ),
     );
-      
-      // Center(
-      //   child: 
-      //   Text(
-      //     'Setting',
-      //     style: TextStyle(
-      //       color: Colors.blue,
-      //       fontSize: 45,
-      //       fontWeight: FontWeight.w600,
-      //       fontStyle: FontStyle.normal,
-      //       letterSpacing: 1.5,
-      //       decoration: TextDecoration.underline,
-      //     ),
-      //   ),
-      // ),
 
+    // Center(
+    //   child:
+    //   Text(
+    //     'Setting',
+    //     style: TextStyle(
+    //       color: Colors.blue,
+    //       fontSize: 45,
+    //       fontWeight: FontWeight.w600,
+    //       fontStyle: FontStyle.normal,
+    //       letterSpacing: 1.5,
+    //       decoration: TextDecoration.underline,
+    //     ),
+    //   ),
+    // ),
   }
 }
