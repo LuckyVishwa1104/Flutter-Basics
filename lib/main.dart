@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/bottom_navigton_demo/bottom_nav_driver.dart';
 import 'package:flutter_basics/bottom_navigton_demo/navigation_bar_driver.dart';
+import 'package:flutter_basics/bottom_navigton_demo/persistent_navbar_driver.dart';
 import 'package:flutter_basics/home_page_new.dart';
 import 'package:flutter_basics/hone_page.dart';
 
@@ -14,9 +15,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: NavigationBarDriver(),
+      theme: ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: Colors.blue,
+      ),
+      home: const PersistentNavbarDriver(),
     );
   }
 }
