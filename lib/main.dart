@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/bottom_navigton_demo/bottom_nav_driver.dart';
 import 'package:flutter_basics/bottom_navigton_demo/navigation_bar_driver.dart';
+import 'package:flutter_basics/bottom_navigton_demo/persistent_navbar_driver.dart';
 import 'package:flutter_basics/home_page_new.dart';
 import 'package:flutter_basics/hone_page.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         colorSchemeSeed: Colors.blue,
       ),
-      home: NavigationBarDriver(),
+      home: const PersistentNavbarDriver(),
     );
   }
 }
