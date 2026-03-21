@@ -6,20 +6,64 @@ class ProfileDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color.fromARGB(255, 212, 196, 196),
-      child: const Center(
-        child: Text(
-          'Profile',
-          style: TextStyle(
-            color: Colors.green,
-            fontSize: 45,
-            fontWeight: FontWeight.w600,
-            fontStyle: FontStyle.normal,
-            letterSpacing: 1.5,
-            decoration: TextDecoration.underline,
+        color: const Color.fromARGB(255, 212, 196, 196),
+        child: Container(
+          padding: const EdgeInsets.all(18),
+          child: Column(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: const Color.fromARGB(255, 228, 228, 227),
+                ),
+                child: const Icon(
+                  Icons.person,
+                  color: Colors.grey,
+                  size: 190,
+                ),
+              ),
+              const SizedBox(
+                height: 40,
+              ),
+              const Column(
+                // mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Name : User',
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontStyle: FontStyle.normal,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Email : User@gmail.com',
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontStyle: FontStyle.normal,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Contact : 9989898988',
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontStyle: FontStyle.normal,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
