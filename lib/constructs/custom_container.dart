@@ -10,6 +10,7 @@ class CustomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: Text('Custom Container'),
@@ -23,7 +24,7 @@ class CustomContainer extends StatelessWidget {
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Color.fromARGB(255, 197, 134, 130),
+                  color: Color.fromARGB(255, 229, 229, 229),
                 ),
                 // foregroundDecoration: BoxDecoration(borderRadius: BorderRadius.circular(5),border: Border.all(width: 2)),
                 child: Column(
@@ -35,7 +36,7 @@ class CustomContainer extends StatelessWidget {
                       // foregroundDecoration: BoxDecoration(borderRadius: BorderRadius.circular(8),border: Border.all(width: 2)),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.orange),
+                          color: const Color.fromARGB(255, 207, 209, 210)),
                       width: double.infinity,
                       height: 200,
                       child: SingleChildScrollView(
@@ -68,7 +69,7 @@ class CustomContainer extends StatelessWidget {
                       padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 207, 209, 210),
                       ),
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
@@ -100,7 +101,7 @@ class CustomContainer extends StatelessWidget {
                       width: double.infinity,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.green,
+                        color: Color.fromARGB(255, 207, 209, 210),
                       ),
                       child: Column(
                         children: [
@@ -120,13 +121,13 @@ class CustomContainer extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height:25,
               ),
               Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Color.fromARGB(255, 199, 152, 148),
+                  color: Color.fromARGB(255, 229, 229, 229),
                 ),
                 // foregroundDecoration: BoxDecoration(borderRadius: BorderRadius.circular(5),border: Border.all(width: 2)),
                 child: Column(
@@ -137,7 +138,8 @@ class CustomContainer extends StatelessWidget {
                       // foregroundDecoration: BoxDecoration(borderRadius: BorderRadius.circular(8),border: Border.all(width: 2)),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.orange),
+                          color: Color.fromARGB(255, 207, 209, 210),
+                          ),
                       width: double.infinity,
                       child: Column(
                         children: [
@@ -160,7 +162,7 @@ class CustomContainer extends StatelessWidget {
                       padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 207, 209, 210),
                       ),
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
@@ -187,7 +189,7 @@ class CustomContainer extends StatelessWidget {
                       width: double.infinity,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.green,
+                        color: Color.fromARGB(255, 207, 209, 210),
                       ),
                       child: Column(
                         children: [
