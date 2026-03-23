@@ -30,7 +30,6 @@ class _PersistentNavbarDriverState extends State<PersistentNavbarDriver> {
         selectIndex = index;
       });
     }
-    selectIndex = index;
   }
 
   // Widget for routing
