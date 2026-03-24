@@ -1,20 +1,30 @@
 import 'package:flutter/material.dart';
 
-class CustomContainerDemo extends StatelessWidget {
+class CustomContainerDemo extends StatefulWidget {
   const CustomContainerDemo({super.key});
 
   @override
+  State<CustomContainerDemo> createState() => _CustomContainerDemoState();
+}
+
+class _CustomContainerDemoState extends State<CustomContainerDemo> {
+  bool toggle = false;
+
+  Color bgClrLight = const Color.fromARGB(255, 216, 214, 214);
+  Color bgClrDark = const Color.fromARGB(255, 60, 59, 59);
+
+  Color textColorLight = Colors.black;
+  Color textColorDark = Colors.white;
+
+  @override
   Widget build(BuildContext context) {
-
-    Color bgClr = const Color.fromARGB(255, 54, 54, 54);
-
-    Color textColor = Colors.white;
-
     return Scaffold(
-      backgroundColor: Colors.black12,
+      backgroundColor: toggle
+          ? const Color.fromARGB(255, 239, 236, 236)
+          : const Color.fromARGB(251, 25, 25, 25),
       appBar: AppBar(
-        backgroundColor: Colors.black,
-        foregroundColor: Colors.white,
+        backgroundColor: toggle ? Colors.white : Colors.black,
+        foregroundColor: toggle ? Colors.black : Colors.white,
         title: const Text(
           'Custome Container',
           style: TextStyle(
@@ -22,13 +32,19 @@ class CustomContainerDemo extends StatelessWidget {
             fontWeight: FontWeight.w300,
           ),
         ),
-        actions: const [
-          Icon(
-            Icons.logout,
-          )
+        actions: [
+          IconButton(
+            icon: Icon(
+              toggle ? Icons.light_mode : Icons.dark_mode,
+            ),
+            onPressed: () {
+              setState(() {
+                toggle = !toggle;
+              });
+            },
+          ),
         ],
-
-        actionsPadding: EdgeInsets.all(8),
+        actionsPadding: const EdgeInsets.all(8),
       ),
 
       // drawer
@@ -44,7 +60,7 @@ class CustomContainerDemo extends StatelessWidget {
               height: 150,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: bgClr,
+                color: toggle ? bgClrLight : bgClrDark,
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Center(
@@ -53,7 +69,7 @@ class CustomContainerDemo extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.w300,
-                    color: textColor,
+                    color: toggle ? textColorLight : textColorDark,
                   ),
                 ),
               ),
@@ -71,7 +87,7 @@ class CustomContainerDemo extends StatelessWidget {
                     height: 160,
                     width: 150,
                     decoration: BoxDecoration(
-                      color: bgClr,
+                      color: toggle ? bgClrLight : bgClrDark,
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Center(
@@ -80,7 +96,7 @@ class CustomContainerDemo extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w300,
-                          color: textColor,
+                          color: toggle ? textColorLight : textColorDark,
                         ),
                       ),
                     ),
@@ -92,7 +108,7 @@ class CustomContainerDemo extends StatelessWidget {
                     height: 160,
                     width: 150,
                     decoration: BoxDecoration(
-                      color: bgClr,
+                      color: toggle ? bgClrLight : bgClrDark,
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Center(
@@ -101,7 +117,7 @@ class CustomContainerDemo extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w300,
-                          color: textColor,
+                          color: toggle ? textColorLight : textColorDark,
                         ),
                       ),
                     ),
@@ -113,7 +129,7 @@ class CustomContainerDemo extends StatelessWidget {
                     height: 160,
                     width: 150,
                     decoration: BoxDecoration(
-                      color: bgClr,
+                      color: toggle ? bgClrLight : bgClrDark,
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Center(
@@ -122,7 +138,7 @@ class CustomContainerDemo extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w300,
-                          color: textColor,
+                          color: toggle ? textColorLight : textColorDark,
                         ),
                       ),
                     ),
@@ -134,7 +150,7 @@ class CustomContainerDemo extends StatelessWidget {
                     height: 160,
                     width: 150,
                     decoration: BoxDecoration(
-                      color: bgClr,
+                      color: toggle ? bgClrLight : bgClrDark,
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Center(
@@ -143,7 +159,7 @@ class CustomContainerDemo extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w300,
-                          color: textColor,
+                          color: toggle ? textColorLight : textColorDark,
                         ),
                       ),
                     ),
@@ -155,11 +171,12 @@ class CustomContainerDemo extends StatelessWidget {
               height: 20,
             ),
 
+            // third container
             Container(
               height: 200,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: bgClr,
+                color: toggle ? bgClrLight : bgClrDark,
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Center(
@@ -168,7 +185,7 @@ class CustomContainerDemo extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.w300,
-                    color: textColor,
+                    color: toggle ? textColorLight : textColorDark,
                   ),
                 ),
               ),
@@ -177,11 +194,12 @@ class CustomContainerDemo extends StatelessWidget {
               height: 20,
             ),
 
+            // fourth container
             Container(
               height: 150,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: bgClr,
+                color: toggle ? bgClrLight : bgClrDark,
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Center(
@@ -190,7 +208,7 @@ class CustomContainerDemo extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.w300,
-                    color: textColor,
+                    color: toggle ? textColorLight : textColorDark,
                   ),
                 ),
               ),
@@ -199,7 +217,7 @@ class CustomContainerDemo extends StatelessWidget {
               height: 20,
             ),
 
-            // row
+            // fifth container
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -208,7 +226,7 @@ class CustomContainerDemo extends StatelessWidget {
                     height: 80,
                     width: 150,
                     decoration: BoxDecoration(
-                      color: bgClr,
+                      color: toggle ? bgClrLight : bgClrDark,
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Center(
@@ -217,7 +235,7 @@ class CustomContainerDemo extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w300,
-                          color: textColor,
+                          color: toggle ? textColorLight : textColorDark,
                         ),
                       ),
                     ),
@@ -229,7 +247,7 @@ class CustomContainerDemo extends StatelessWidget {
                     height: 80,
                     width: 150,
                     decoration: BoxDecoration(
-                      color: bgClr,
+                      color: toggle ? bgClrLight : bgClrDark,
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Center(
@@ -238,7 +256,7 @@ class CustomContainerDemo extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w300,
-                          color: textColor,
+                          color: toggle ? textColorLight : textColorDark,
                         ),
                       ),
                     ),
@@ -250,7 +268,7 @@ class CustomContainerDemo extends StatelessWidget {
                     height: 80,
                     width: 150,
                     decoration: BoxDecoration(
-                      color: bgClr,
+                      color: toggle ? bgClrLight : bgClrDark,
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Center(
@@ -259,7 +277,7 @@ class CustomContainerDemo extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w300,
-                          color: textColor,
+                          color: toggle ? textColorLight : textColorDark,
                         ),
                       ),
                     ),
@@ -271,12 +289,12 @@ class CustomContainerDemo extends StatelessWidget {
               height: 20,
             ),
 
-            // column children items
+            // sixth Container
             Container(
               height: 150,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: bgClr,
+                color: toggle ? bgClrLight : bgClrDark,
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Center(
@@ -285,13 +303,10 @@ class CustomContainerDemo extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.w300,
-                    color: textColor,
+                    color: toggle ? textColorLight : textColorDark,
                   ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 20,
             ),
           ],
         ),
