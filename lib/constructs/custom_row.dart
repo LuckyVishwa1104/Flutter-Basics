@@ -11,7 +11,7 @@ class CustomRow extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Row Manipulation',
           ),
           backgroundColor: Colors.blue,
@@ -20,7 +20,7 @@ class CustomRow extends StatelessWidget {
           // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(
+            const Text(
               'Item1',
               style: TextStyle(
                   fontSize: 30,
@@ -28,7 +28,7 @@ class CustomRow extends StatelessWidget {
                   backgroundColor: Colors.black54),
             ),
             MyElevatedbutton(onColorChanged: metho),
-            Text(
+            const Text(
               'Hope U well',
               style: TextStyle(
                   fontSize: 25.0,
