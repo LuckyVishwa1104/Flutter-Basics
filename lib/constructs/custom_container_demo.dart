@@ -227,10 +227,52 @@ class _CustomContainerDemoState extends State<CustomContainerDemo> {
               height: 20,
             ),
 
-            // fourth container
+            // container with clip behaviour
+            Container(
+              height: 190,
+              width: double.infinity,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: toggle ? bgClrLight : bgClrDark,
+                borderRadius: BorderRadius.circular(8),
+                boxShadow: [
+                  BoxShadow(
+                    color: toggle
+                        ? const Color.fromARGB(255, 111, 110, 110)
+                        : const Color.fromARGB(255, 234, 233, 233),
+                    blurRadius: 2,
+                  ),
+                ],
+              ),
+              child: Container(
+                constraints: const BoxConstraints(
+                  maxHeight: 150,
+                  minHeight: 150,
+                ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  border: BoxBorder.all(
+                    color: Colors.black,
+                    width: 1,
+                    strokeAlign: BorderSide.strokeAlignOutside,
+                  ),
+                ),
+                clipBehavior:
+                    Clip.hardEdge, // adjust the image inside rounded corner
+                child: Image.asset(
+                  'assets/img3.jpeg',
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+
+            // fourth container - constraint
             Container(
               height: 150,
               width: double.infinity,
+              alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: toggle ? bgClrLight : bgClrDark,
                 borderRadius: BorderRadius.circular(8),
@@ -243,13 +285,20 @@ class _CustomContainerDemoState extends State<CustomContainerDemo> {
                   )
                 ],
               ),
-              child: Center(
-                child: Text(
-                  'Hello!!!',
-                  style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w300,
-                    color: toggle ? textColorLight : textColorDark,
+              child: Container(
+                height: 120,
+                width: 120,
+                constraints: const BoxConstraints(
+                  maxHeight: 70,
+                  maxWidth: 70,
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.amberAccent,
+                  border: Border.all(
+                    color: Colors.black,
+                    style: BorderStyle.solid,
+                    width: 2,
+                    strokeAlign: BorderSide.strokeAlignInside,
                   ),
                 ),
               ),
