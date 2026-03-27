@@ -64,29 +64,38 @@ class CustomRowDemo extends StatelessWidget {
           CrossAxisAlignment.start - it allign the chidren to the start of the parebt widget
 
           CrossAxisAlignment.stretch - it force the children to occupy all the available space
-          CrossAxisAlignment.baseline - it align text widget based on the baseline
+          CrossAxisAlignment.baseline - it align text widget based on the baseline(the bottom line at which all the text will align same)
           */
 
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            // crossAxisAlignment: CrossAxisAlignment.baseline,
 
             // textBaseline: TextBaseline.alphabetic,
             children: [
 
-              // Text(
-              //   "Hello",
-              //   style: TextStyle(fontSize: 40, color: Colors.blue),
+              // Container(
+              //   decoration: const BoxDecoration(color: Color.fromARGB(255, 169, 169, 169),),
+              //   child: const Text(
+              //     "Hello",
+              //     style: TextStyle(fontSize: 40, color: Colors.blue),
+              //   ),
               // ),
-              // SizedBox(width: 10),
-              // Text(
-              //   "World",
-              //   style: TextStyle(fontSize: 20, color: Colors.red),
+              // const SizedBox(width: 10),
+              // Container(
+              //   decoration: const BoxDecoration(color: Color.fromARGB(255, 169, 169, 169),),
+              //   child: const Text(
+              //     "World",
+              //     style: TextStyle(fontSize: 20, color: Colors.red),
+              //   ),
               // ),
-              // SizedBox(width: 10),
-              // Text(
-              //   "Flutter",
-              //   style: TextStyle(fontSize: 30, color: Colors.green),
+              // const SizedBox(width: 10),
+              // Container(
+              //   decoration: const BoxDecoration(color: Color.fromARGB(255, 169, 169, 169),),
+              //   child: const Text(
+              //     "Flutter",
+              //     style: TextStyle(fontSize: 30, color: Colors.green),
+              //   ),
               // ),
 
               Container(
