@@ -32,7 +32,7 @@ class CustomRowDemo extends StatelessWidget {
       // body
       body: Center(
         child: Container(
-          height: 290,
+          // height: 290,
           width: double.infinity,
           // padding: const EdgeInsets.all(20),
           margin: const EdgeInsets.all(10),
@@ -55,21 +55,27 @@ class CustomRowDemo extends StatelessWidget {
 
           MainAxisAlignment.spaceBetween - it add equal spaces between children except the first and last children
           MainAxisAlignment.spaceEvenly - it add equal spaces between childrens and start and end children as well
-          MainAxisAlignment.start - it add equal spaces between childrens and add half spaces between start and end children
+          MainAxisAlignment.spaceAround - it add equal spaces between childrens and add half spaces between start and end children
           */
 
           /* CrossAxisAlignment - for ROW it deal with vertical axis
           CrossAxisAlignment.center - it allign the children to the center of the parent widget
           CrossAxisAlignment.end - it allign the children to the end of the parent widget 
-          CrossAxisAlignment.start - it allign the chidren to the start of the parebt widget
+          CrossAxisAlignment.start - it allign the chidren to the start of the parent widget
 
-          CrossAxisAlignment.stretch - it force the children to occupy all the available space
-          CrossAxisAlignment.baseline - it align text widget based on the baseline(the bottom line at which all the text will align same)
+          CrossAxisAlignment.strech - it force the children to occupy all the available space
+          CrossAxisAlignment.baseLine - it align text widget based on the baseline(the bottom line at which all the text will align same)
           */
 
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            // crossAxisAlignment: CrossAxisAlignment.baseline,
+            // mainAxisAlignment: MainAxisAlignment.spaceAround, 
+            crossAxisAlignment: CrossAxisAlignment.center,
+
+            // textDirection: TextDirection.ltr, // reverse direction ltr(left to right) rtl(right to left)
+
+            verticalDirection: VerticalDirection.down,
+
+            // mainAxisSize: MainAxisSize.min,  // it takes max or min width available in parent widget
 
             // textBaseline: TextBaseline.alphabetic,
             children: [
