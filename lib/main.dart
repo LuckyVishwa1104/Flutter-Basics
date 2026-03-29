@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basics/bottom_navigton_demo/bottom_nav_driver.dart';
 import 'package:flutter_basics/bottom_navigton_demo/navigation_bar_driver.dart';
 import 'package:flutter_basics/bottom_navigton_demo/persistent_navbar_driver.dart';
+import 'package:flutter_basics/constructs/custom_column_demo.dart';
 import 'package:flutter_basics/constructs/custom_container.dart';
 import 'package:flutter_basics/constructs/custom_container_demo.dart';
 import 'package:flutter_basics/constructs/custom_row.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         colorSchemeSeed: Colors.blue,
       ),
-      home: const CustomRowDemo(),
+      home: const CustomColumnDemo(),
     );
   }
 }
