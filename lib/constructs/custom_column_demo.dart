@@ -35,8 +35,11 @@ class CustomColumnDemo extends StatelessWidget {
       // body
       body: Container(
         width: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.grey,
+        ),
         child: Column(
-        
+          
           // MainAxisAlignment : for column it deal with vertical axis
           /**
            * MainAxisAlignment.start - it align the children to the start of the column
@@ -58,38 +61,50 @@ class CustomColumnDemo extends StatelessWidget {
            * CrossAxisAlignment
            */
         
-          // mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.start,
         
           // crossAxisAlignment: CrossAxisAlignment.start,
-
+        
           // textBaseline: TextBaseline.alphabetic,
+        
+          // mainAxisSize: MainAxisSize.min, // it force the column to take max or min height of the pareent
 
+          // textDirection: TextDirection.ltr,  // control the horizontal alignment of children
+
+          // verticalDirection: VerticalDirection.down,  // it monitor the order in which the children align vertically
+        
+        
           children: [
-
-            Container(
-              width: 200,
-                decoration: const BoxDecoration(color: Color.fromARGB(255, 169, 169, 169),),
-                child: const Text(
-                  "Hello",
-                  style: TextStyle(fontSize: 40, color: Colors.blue),
-                ),
-              ),
-              const SizedBox(width: 10),
-              Container(
-                decoration: const BoxDecoration(color: Color.fromARGB(255, 169, 169, 169),),
-                child: const Text(
-                  "World",
-                  style: TextStyle(fontSize: 20, color: Colors.red),
-                ),
-              ),
-              const SizedBox(width: 10),
-              Container(
-                decoration: const BoxDecoration(color: Color.fromARGB(255, 169, 169, 169),),
-                child: const Text(
-                  "Flutter",
-                  style: TextStyle(fontSize: 30, color: Colors.green),
-                ),
-              ),
+            // Container(
+            //   width: 200,
+            //   decoration: const BoxDecoration(
+            //     color: Color.fromARGB(255, 169, 169, 169),
+            //   ),
+            //   child: const Text(
+            //     "Hello",
+            //     style: TextStyle(fontSize: 40, color: Colors.blue),
+            //   ),
+            // ),
+            // const SizedBox(width: 10),
+            // Container(
+            //   decoration: const BoxDecoration(
+            //     color: Color.fromARGB(255, 169, 169, 169),
+            //   ),
+            //   child: const Text(
+            //     "World",
+            //     style: TextStyle(fontSize: 20, color: Colors.red),
+            //   ),
+            // ),
+            // const SizedBox(width: 10),
+            // Container(
+            //   decoration: const BoxDecoration(
+            //     color: Color.fromARGB(255, 169, 169, 169),
+            //   ),
+            //   child: const Text(
+            //     "Flutter",
+            //     style: TextStyle(fontSize: 30, color: Colors.green),
+            //   ),
+            // ),
         
             // // 1st children
             // Container(
@@ -125,10 +140,26 @@ class CustomColumnDemo extends StatelessWidget {
             //       8,
             //     ),
             //   ),
-            // )
-            
+            // ),
+
+            Container(
+                color: Colors.red,
+                padding: EdgeInsets.all(8),
+                child: Text('Item 1'),
+              ),
+              Container(
+                color: Colors.green,
+                padding: EdgeInsets.all(8),
+                child: Text('Item 2'),
+              ),
+              Container(
+                color: Colors.blue,
+                padding: EdgeInsets.all(8),
+                child: Text('Item 3'),
+              ),
+
+        
           ],
-          
         ),
       ),
     );
