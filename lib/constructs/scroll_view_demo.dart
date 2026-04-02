@@ -5,8 +5,9 @@ class ScrollViewDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     // toggle for column or row
-    bool toggle = false;
+    bool toggle = true;
 
     List<Color> containerColor = [
       Colors.purple,
@@ -19,6 +20,7 @@ class ScrollViewDemo extends StatelessWidget {
     ];
 
     return Scaffold(
+
       // app bar
       appBar: AppBar(
         // foregrand and background color
@@ -38,7 +40,8 @@ class ScrollViewDemo extends StatelessWidget {
         // action button
         actions: const [
           Icon(
-            Icons.snapchat,
+            Icons.snapchat_sharp,
+            color: Colors.white,
           )
         ],
 
@@ -49,7 +52,7 @@ class ScrollViewDemo extends StatelessWidget {
       // drawer
       drawer: const Icon(Icons.grid_4x4_outlined),
 
-      // bosy of scroll view page
+      // body of scroll view page
       body: toggle
           ? Container(
               // Column scroll view
@@ -58,8 +61,15 @@ class ScrollViewDemo extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.all(10),
                 decoration: const BoxDecoration(color: Colors.white),
+                height: 550,
                 child: SingleChildScrollView(
-                  scrollDirection: Axis.vertical,  // use vertical for column scrolling
+
+                  scrollDirection: Axis.vertical,  // contorll the scroll direction of the childrens
+
+                  // physics: const BouncingScrollPhysics(),  // use vertical for column scrolling
+
+                  // reverse: true,  // it controls the scroll start either form bottom to top or from top to bottom (use case - chat applicaiton)
+
                   child: Column(
                     children: List.generate(
                       containerColor.length,
@@ -89,6 +99,7 @@ class ScrollViewDemo extends StatelessWidget {
               ),
             )
           :
+
           // row scroll view
           Container(
               padding: const EdgeInsetsDirectional.all(
@@ -135,6 +146,8 @@ class ScrollViewDemo extends StatelessWidget {
                 ),
               ),
             ),
+
     );
+
   }
 }
