@@ -8,6 +8,8 @@ import 'package:flutter_basics/constructs/custom_container_demo.dart';
 import 'package:flutter_basics/constructs/custom_row.dart';
 import 'package:flutter_basics/constructs/custom_row_demo.dart';
 import 'package:flutter_basics/constructs/custom_scroll_view.dart';
+import 'package:flutter_basics/constructs/list_view_builder_demo.dart';
+import 'package:flutter_basics/constructs/list_view_builder_separated.dart';
 import 'package:flutter_basics/constructs/scroll_view_demo.dart';
 import 'package:flutter_basics/home_page_new.dart';
 import 'package:flutter_basics/hone_page.dart';
@@ -32,7 +34,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         colorSchemeSeed: Colors.blue,
       ),
-      home: const ScrollViewDemo(),
+      home: const ListViewBuilderSeparated(),
+      // home: const ListViewBuilderDemo(),
+      // home: const ScrollViewDemo(),
     );
   }
 }
