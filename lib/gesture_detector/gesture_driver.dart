@@ -16,7 +16,7 @@ class GestureDriver extends StatelessWidget {
       routes: {
         '/imagePage' : (context) => ImagePage(),
         '/iconPage' : (context) => IconPage(),
-        '/textPage' : (context) => CustomContainer(),
+        '/textPage' : (context) => TextPage(),
       },
     );
   }

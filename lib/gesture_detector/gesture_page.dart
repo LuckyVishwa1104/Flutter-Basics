@@ -7,7 +7,7 @@ class GesturePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Gesture Detector'),
+        title: const Text('Gesture Detector'),
       ),
       body: Center(
         child: Column(
@@ -28,7 +28,7 @@ class GesturePage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20.0,
             ),
 
@@ -43,7 +43,7 @@ class GesturePage extends StatelessWidget {
                 color: Colors.grey[800],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20.0,
             ),
 
@@ -52,7 +52,7 @@ class GesturePage extends StatelessWidget {
               onTap: () {
                 Navigator.pushNamed(context, '/textPage');
               },
-              child: Text(
+              child: const Text(
                 'Click Here',
                 style: TextStyle(fontSize: 20),
               ),

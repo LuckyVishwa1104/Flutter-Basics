@@ -13,6 +13,12 @@ import 'package:flutter_basics/constructs/custom_scroll_view.dart';
 import 'package:flutter_basics/constructs/list_view_builder_demo.dart';
 import 'package:flutter_basics/constructs/list_view_builder_separated.dart';
 import 'package:flutter_basics/constructs/scroll_view_demo.dart';
+import 'package:flutter_basics/gesture_detector/container_page.dart';
+import 'package:flutter_basics/gesture_detector/gesture_driver.dart';
+import 'package:flutter_basics/gesture_detector/gesture_page_demo.dart';
+import 'package:flutter_basics/gesture_detector/icon_page.dart';
+import 'package:flutter_basics/gesture_detector/image_page.dart';
+import 'package:flutter_basics/gesture_detector/text_page.dart';
 import 'package:flutter_basics/home_page_new.dart';
 import 'package:flutter_basics/hone_page.dart';
 
@@ -28,7 +34,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return 
 
-    // const ButtonDriver();
+    // const GestureDriver();
 
     MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -36,8 +42,13 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         colorSchemeSeed: Colors.blue,
       ),
-      home: const ButtonDriverDemo(),
-
+      home: const GesturePageDemo(),
+      routes: {
+        '/imagePage' : (context) => const ImagePage(),
+        '/iconPage' : (context) => const IconPage(),
+        '/textPage' : (contex) => const TextPage(),
+        '/containerPage' : (context) => const ContainerPage(),
+      },
     );
 
   }
