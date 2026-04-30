@@ -15,6 +15,7 @@ import 'package:flutter_basics/constructs/list_view_builder_demo.dart';
 import 'package:flutter_basics/constructs/list_view_builder_separated.dart';
 import 'package:flutter_basics/constructs/scroll_view_demo.dart';
 import 'package:flutter_basics/dialog_box/dialog_box_demo.dart';
+import 'package:flutter_basics/drawer/drawer_demo.dart';
 import 'package:flutter_basics/gesture_detector/container_page.dart';
 import 'package:flutter_basics/gesture_detector/drag_gesture_demo.dart';
 import 'package:flutter_basics/gesture_detector/gesture_driver.dart';
@@ -54,7 +55,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         colorSchemeSeed: Colors.blue,
       ),
-      home: const DialogBoxDemo(),
+      home: const DrawerDemo(),
       routes: {
         '/imagePage' : (context) => const ImagePage(),
         '/iconPage' : (context) => const IconPage(),
