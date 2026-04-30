@@ -6,6 +6,7 @@ class ProfileDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
         color: const Color.fromARGB(255, 212, 196, 196),
         child: Container(
           padding: const EdgeInsets.all(18),
