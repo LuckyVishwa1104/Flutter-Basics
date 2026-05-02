@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CustomElevatedButton extends StatelessWidget {
-  const CustomElevatedButton({super.key, required this.title});
+  const CustomElevatedButton({super.key, required this.title, required this.onTap});
 
   final String title;
   final double vertiPadding = 10;
   final double horiPadding = 15;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class CustomElevatedButton extends StatelessWidget {
           vertical: vertiPadding,
         ),
       ),
-      onPressed: () {},
+      onPressed: onTap,
       child: Text(
         title,
         maxLines: 1,
