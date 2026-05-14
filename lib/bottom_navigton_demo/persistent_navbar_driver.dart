@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basics/bottom_navigton_demo/home_demo.dart';
 import 'package:flutter_basics/bottom_navigton_demo/profile_demo.dart';
 import 'package:flutter_basics/bottom_navigton_demo/setting_demo.dart';
+import 'package:flutter_basics/components/custom_app_bar.dart';
+import 'package:flutter_basics/components/custom_bottom_navbar.dart';
+import 'package:flutter_basics/model/bottom_navbar_model.dart';
 
 class PersistentNavbarDriver extends StatefulWidget {
   const PersistentNavbarDriver({super.key});
@@ -12,6 +15,24 @@ class PersistentNavbarDriver extends StatefulWidget {
 
 class _PersistentNavbarDriverState extends State<PersistentNavbarDriver> {
   int selectIndex = 0;
+
+  final List<BottomNavbarModel> navBarTabList = [
+    BottomNavbarModel(
+      icon: Icons.home_outlined,
+      selectedIcon: Icons.home,
+      label: "HOME",
+    ),
+    BottomNavbarModel(
+      icon: Icons.settings_outlined,
+      selectedIcon: Icons.settings,
+      label: "SETTINGS",
+    ),
+    BottomNavbarModel(
+      icon: Icons.person_outline,
+      selectedIcon: Icons.person,
+      label: "PROFILE",
+    ),
+  ];
 
   // navigation list
   List<GlobalKey<NavigatorState>> navigationKeys = [
@@ -67,15 +88,13 @@ class _PersistentNavbarDriverState extends State<PersistentNavbarDriver> {
   Widget build(BuildContext context) {
     return Scaffold(
       // App Bar
-      appBar: AppBar(
-        title: const Text(
-          'App Main Screen',
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.w400,
+      appBar: const CustomAppBar(
+        title: 'Main Screen',
+        actions: [
+          Icon(
+            Icons.cloud_circle,
           ),
-        ),
-        backgroundColor: Colors.black,
+        ],
       ),
 
       // body
@@ -87,43 +106,49 @@ class _PersistentNavbarDriverState extends State<PersistentNavbarDriver> {
         ],
       ),
 
-      // Persistent Nav bar
-      bottomNavigationBar: NavigationBar(
+      // persistent nav bar with custom commponent
+      bottomNavigationBar: CustomBottomNavbar(
+        onTabTap: onTabTap,
         selectedIndex: selectIndex,
-        onDestinationSelected: onTabTap,
-        backgroundColor: Colors.black,
-        
-        // indicatorColor: Colors.white,
-        // shadowColor: Color.fromARGB(255, 251, 92, 92),
-        // surfaceTintColor: const Color.fromARGB(255, 251, 92, 92),
-        destinations: const [
-          // Home Tab
-          NavigationDestination(
-            icon: Icon(Icons.home),
-            label: 'Home',
-            selectedIcon: Icon(Icons.home_filled),
-          ),
-
-          // Setting Tab
-          NavigationDestination(
-            icon: Icon(Icons.settings),
-            label: 'SETTINGS',
-            selectedIcon: Icon(
-              Icons.settings_accessibility_outlined,
-            ),
-          ),
-
-          // Profile Tab
-          NavigationDestination(
-            
-            icon: Icon(Icons.person),
-            label: 'PROFILE',
-            selectedIcon: Icon(
-              Icons.person_remove,
-            ),
-          )
-        ],
+        tabList: navBarTabList,
       ),
+
+      // Persistent Nav bar
+      // bottomNavigationBar: NavigationBar(
+      //   selectedIndex: selectIndex,
+      //   onDestinationSelected: onTabTap,
+      //   backgroundColor: Colors.black,
+
+      //   // indicatorColor: Colors.white,
+      //   // shadowColor: Color.fromARGB(255, 251, 92, 92),
+      //   // surfaceTintColor: const Color.fromARGB(255, 251, 92, 92),
+      //   destinations: const [
+      //     // Home Tab
+      //     NavigationDestination(
+      //       icon: Icon(Icons.home),
+      //       label: 'Home',
+      //       selectedIcon: Icon(Icons.home_filled),
+      //     ),
+
+      //     // Setting Tab
+      //     NavigationDestination(
+      //       icon: Icon(Icons.settings),
+      //       label: 'SETTINGS',
+      //       selectedIcon: Icon(
+      //         Icons.settings_accessibility_outlined,
+      //       ),
+      //     ),
+
+      //     // Profile Tab
+      //     NavigationDestination(
+      //       icon: Icon(Icons.person),
+      //       label: 'PROFILE',
+      //       selectedIcon: Icon(
+      //         Icons.person_remove,
+      //       ),
+      //     )
+      //   ],
+      // ),
     );
   }
 }
